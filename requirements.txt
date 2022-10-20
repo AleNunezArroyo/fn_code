@@ -6,4 +6,7 @@ seaborn
 WordCloud
 gensim
 plotly
-# -U scikit-learn
+scikit-learn
+Unidecode
+
+# pip install -r requirements.txt
