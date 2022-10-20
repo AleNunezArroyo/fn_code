@@ -1,0 +1,9 @@
+nltk
+numpy==1.19.2
+pandas==1.3.3
+matplotlib
+seaborn
+WordCloud
+gensim
+plotly
+# -U scikit-learn
