@@ -5,4 +5,4 @@ unidecode
 nltk
 numpy
 pandas
-PIL
+Pillow
