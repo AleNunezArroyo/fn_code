@@ -20,8 +20,8 @@ def get_model():
 @st.cache(allow_output_mutation=True)
 def get_extra():
     stop_words = stopwords.words('spanish')
-    image = Image.open('./file/image.jpg')
-    data_test = pd.read_csv('./file/test_df.csv')
+    image = Image.open('https://github.com/AlejandroNunezArroyo/fn_code/blob/61e527029c5274063df19b7f5c0a999ce6748337/web_streamlit/file/image.jpg')
+    data_test = pd.read_csv('https://github.com/AlejandroNunezArroyo/fn_code/blob/61e527029c5274063df19b7f5c0a999ce6748337/web_streamlit/file/test_df.csv')
     df = data_test[['clean_token_head_con', 'label']]
     return stop_words, image, df
 
