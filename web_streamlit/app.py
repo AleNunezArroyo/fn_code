@@ -9,6 +9,10 @@ import gensim
 import pandas as pd
 from nltk.corpus import stopwords
 from PIL import Image
+from pathlib import Path
+import os
+current_directory = Path(__file__).parent #Get current directory
+
 nltk.download("stopwords")
 
 @st.cache(allow_output_mutation=True)
@@ -20,8 +24,10 @@ def get_model():
 @st.cache(allow_output_mutation=True)
 def get_extra():
     stop_words = stopwords.words('spanish')
-    image = Image.open('https://github.com/AlejandroNunezArroyo/fn_code/blob/61e527029c5274063df19b7f5c0a999ce6748337/web_streamlit/file/image.jpg')
-    data_test = pd.read_csv('https://github.com/AlejandroNunezArroyo/fn_code/blob/61e527029c5274063df19b7f5c0a999ce6748337/web_streamlit/file/test_df.csv')
+    image = open(os.path.join(current_directory, 'file/image.jpg'), 'rb')
+    image = Image.open(image)
+    data_test = open(os.path.join(current_directory, 'file/test_df.csv'), 'rb')
+    data_test = pd.read_csv(data_test)
     df = data_test[['clean_token_head_con', 'label']]
     return stop_words, image, df
 
