@@ -1,7 +1,7 @@
 tensorflow
 torch
 transformers
-nidecode
+unidecode
 nltk
 numpy
 pandas
