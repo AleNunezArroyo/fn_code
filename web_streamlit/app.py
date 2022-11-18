@@ -22,8 +22,8 @@ def get_model():
 def get_extra():
     nltk.download("stopwords")
     stop_words = stopwords.words('spanish')
-    image = Image.open('file/image.jpg')
-    data_test = pd.read_csv('file/test_df.csv')
+    image = Image.open('https://github.com/AlejandroNunezArroyo/fn_code/blob/main/web_streamlit/file/image.jpg')
+    data_test = pd.read_csv('https://github.com/AlejandroNunezArroyo/fn_code/blob/main/web_streamlit/file/test_df.csv')
     df = data_test[['clean_token_head_con', 'label']]
     return stop_words, image, df
 
