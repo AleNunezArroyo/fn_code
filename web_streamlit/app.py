@@ -14,8 +14,8 @@ from PIL import Image
 
 @st.cache(allow_output_mutation=True)
 def get_model():
-    tokenizer = BertTokenizerFast.from_pretrained('/home/ale/Documents/model/bert-base-spanish-wwm-uncased')
-    model = BertForSequenceClassification.from_pretrained("/home/ale/Downloads/CustomModel")
+    tokenizer = BertTokenizerFast.from_pretrained('dccuchile/bert-base-spanish-wwm-uncased')
+    model = BertForSequenceClassification.from_pretrained("AleNunezArroyo/BETO_BolivianFN")
     return tokenizer,model
 
 @st.cache(allow_output_mutation=True)
