@@ -13,7 +13,7 @@ from pathlib import Path
 import os
 current_directory = Path(__file__).parent #Get current directory
 
-nltk.download("stopwords")
+
 
 @st.cache(allow_output_mutation=True)
 def get_model():
@@ -23,6 +23,7 @@ def get_model():
 
 @st.cache(allow_output_mutation=True)
 def get_extra():
+    nltk.download("stopwords")
     stop_words = stopwords.words('spanish')
     image = open(os.path.join(current_directory, 'file/image.jpg'), 'rb')
     image = Image.open(image)
