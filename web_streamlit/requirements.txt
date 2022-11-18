@@ -2,7 +2,6 @@ tensorflow
 torch
 transformers
 tokenizers
-streamlit
 nidecode
 nltk
 numpy
