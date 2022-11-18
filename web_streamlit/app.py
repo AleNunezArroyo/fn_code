@@ -9,8 +9,7 @@ import gensim
 import pandas as pd
 from nltk.corpus import stopwords
 from PIL import Image
-
-
+nltk.download("stopwords")
 
 @st.cache(allow_output_mutation=True)
 def get_model():
@@ -20,7 +19,6 @@ def get_model():
 
 @st.cache(allow_output_mutation=True)
 def get_extra():
-    nltk.download("stopwords")
     stop_words = stopwords.words('spanish')
     image = Image.open('https://github.com/AlejandroNunezArroyo/fn_code/blob/main/web_streamlit/file/image.jpg')
     data_test = pd.read_csv('https://github.com/AlejandroNunezArroyo/fn_code/blob/main/web_streamlit/file/test_df.csv')
