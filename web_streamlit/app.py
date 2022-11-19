@@ -22,7 +22,7 @@ def get_model():
 def get_extra():
     nltk.download("stopwords")
     stop_words = stopwords.words('spanish')
-    image = Image.open('file/image.jpg')
+    image = open(os.path.join(current_directory, 'file/image.jpg'), 'rb')
     return stop_words, image
 
 
