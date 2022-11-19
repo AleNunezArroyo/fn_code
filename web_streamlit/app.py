@@ -9,7 +9,10 @@ import gensim
 import pandas as pd
 from nltk.corpus import stopwords
 from PIL import Image
-
+from PIL import Image
+from pathlib import Path
+import os
+current_directory = Path(__file__).parent #Get current directory
 
 
 @st.cache(allow_output_mutation=True)
