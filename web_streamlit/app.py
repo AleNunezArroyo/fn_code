@@ -14,6 +14,7 @@ import os
 current_directory = Path(__file__).parent #Get current directory
 
 
+
 @st.cache(allow_output_mutation=True)
 def get_model():
     tokenizer = BertTokenizerFast.from_pretrained('dccuchile/bert-base-spanish-wwm-uncased')
