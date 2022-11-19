@@ -26,11 +26,14 @@ def get_extra():
     stop_words = stopwords.words('spanish')
     image = open(os.path.join(current_directory, 'file/image.jpg'), 'rb')
     image = Image.open(image)
-    return stop_words, image
+    data_test = open(os.path.join(current_directory, 'file/test_df.csv'), 'rb')
+    data_test = pd.read_csv(data_test)
+    df = data_test[['clean_token_head_con', 'label']]
+    return stop_words, image, df
 
 
 tokenizer,model = get_model()
-stop_words, image = get_extra()
+stop_words, image, df = get_extra()
 
 st.image(image, caption='Estudiante: Alejandro Núñez Arroyo | Tutor: Ing. Guillermo Sahonero')
 
