@@ -9,5 +9,4 @@ numpy
 pandas
 Pillow
 gensim
-pathlib
 os
