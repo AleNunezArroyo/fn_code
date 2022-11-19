@@ -9,7 +9,6 @@ import gensim
 import pandas as pd
 from nltk.corpus import stopwords
 from PIL import Image
-from PIL import Image
 from pathlib import Path
 import os
 current_directory = Path(__file__).parent #Get current directory
@@ -26,6 +25,7 @@ def get_extra():
     nltk.download("stopwords")
     stop_words = stopwords.words('spanish')
     image = open(os.path.join(current_directory, 'file/image.jpg'), 'rb')
+    image = Image.open(image)
     return stop_words, image
 
 
